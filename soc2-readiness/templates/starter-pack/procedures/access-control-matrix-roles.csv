@@ -1,0 +1,4 @@
+Role,{{CLOUD_PROVIDER}},{{VCS}},{{DATA_STORE}},{{DATA_STORE}},{{IDP}} Admin,Notes
+CEO-{{SECURITY_OWNER}},Owner,Org Admin,Project Owner,Admin,Admin,"Security program owner and Incident Commander per IR Policy §4. Full administrative authority across all production systems."
+COO-CPO,Viewer,Member,Read-only,Read-only,Admin,"Operations and compliance. {{IDP}} Admin for IT and communications. No production write access."
+Engineer,Editor,Member,Read/Write app DB,Read,none,Standard engineering access for production work.

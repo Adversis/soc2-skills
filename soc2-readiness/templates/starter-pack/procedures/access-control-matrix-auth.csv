@@ -1,0 +1,5 @@
+System,Auth Method,Password Fallback Disabled,MFA Source,Network Access,Notes
+{{IDP}},Native,n/a,{{IDP}} 2SV,Public web,OAuth Marketplace restricted to admin-approved apps only
+{{CLOUD_PROVIDER}},Federated,,{{IDP}} 2SV,Public web,Console access federated via {{IDP}} SSO
+{{VCS}},Federated,,{{IDP}} 2SV,Public web,Org membership via {{IDP}} federated access; OAuth app policy restricted to admin-approved
+{{DATA_STORE}},Federated,,{{IDP}} 2SV,Public web,"Console federated via {{IDP}}; database users use SCRAM (no MFA possible), treated as service accounts"

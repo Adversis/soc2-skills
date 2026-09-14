@@ -1,0 +1,5 @@
+Name,Email,Role,Status,Joined,Departed,Exceptions,Notes
+[Name],[email],CEO-{{SECURITY_OWNER}},Active,YYYY-MM,,,Security program owner and Incident Commander
+[Name],[email],COO-CPO,Active,YYYY-MM,,,Operations and compliance; {{IDP}} admin
+[Name],[email],Engineer,Active,YYYY-MM,,,Standard engineering access
+[Name],[email],Engineer,Departed,YYYY-MM,YYYY-MM,,Access revoked within 1 business day of departure

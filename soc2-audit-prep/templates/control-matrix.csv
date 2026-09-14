@@ -1,0 +1,37 @@
+Control ID,TSC Criterion,Control Statement,Owner,Frequency/Trigger,System/Population,Evidence,Evidence Date,Status
+CE-01,CC1.1,"Code of conduct and integrity commitment; acknowledged at hire and annually",{{SECURITY_OWNER}},Per hire + annual,All personnel,Signed acknowledgments,{{AS_OF_DATE}},In place
+CE-02,CC1.2,"Founders provide security oversight appropriate to company stage; oversight cadence documented",{{SECURITY_OWNER}},Annual,Company,Founder/oversight meeting notes,,Not yet due (first documented session scheduled [date])
+CE-03,CC1.3,"Security roles and responsibilities defined and assigned",{{SECURITY_OWNER}},On change,Company,Responsibilities doc + org chart,{{AS_OF_DATE}},In place
+CE-04,CC1.4,"Personnel screened at hire and complete security training (competence)",{{SECURITY_OWNER}},Per hire + annual,All personnel,Screening records + training completion,{{AS_OF_DATE}},In place
+CE-05,CC1.5,"Individuals held accountable for security responsibilities via annual review",{{SECURITY_OWNER}},Annual,All personnel,Annual security review records,,Not yet due (scheduled [date])
+CO-01,CC2.1,"Security-relevant information (policies, procedures) maintained and available",{{SECURITY_OWNER}},Continuous,Company,Policy set + version history,{{AS_OF_DATE}},In place
+CO-02,CC2.2,"Security responsibilities communicated internally at onboarding and annually",{{SECURITY_OWNER}},Per hire + annual,All personnel,Onboarding records + policy acknowledgments,{{AS_OF_DATE}},In place
+CO-03,CC2.3,"Security commitments and incident disclosure communicated externally",{{SECURITY_OWNER}},Continuous,Customers / public,Public security page + customer notifications,{{AS_OF_DATE}},In place
+RA-01,CC3.1,"Objectives defined and an annual risk assessment performed and documented",{{SECURITY_OWNER}},Annual,Company,Risk register (completed assessment),{{AS_OF_DATE}},In place
+RA-02,CC3.2,"Risks identified, analyzed for likelihood and impact, and treated",{{SECURITY_OWNER}},Annual,Company,Risk register,{{AS_OF_DATE}},In place
+RA-03,CC3.3,"Fraud and misuse risk considered in the assessment",{{SECURITY_OWNER}},Annual,Company,Risk register (fraud/misuse entries),{{AS_OF_DATE}},In place
+RA-04,CC3.4,"Impact of significant changes on the control environment assessed",{{SECURITY_OWNER}},On significant change,Company,Change/impact review,{{AS_OF_DATE}},In place
+MO-01,CC4.1,"Control performance monitored via periodic reviews and platform dashboards",{{SECURITY_OWNER}},Continuous + annual,Company,Annual review + GRC dashboards,{{AS_OF_DATE}},In place
+MO-02,CC4.2,"Control deficiencies evaluated, tracked, and communicated to owners",{{SECURITY_OWNER}},On finding,Company,Deficiency / remediation tracking,{{AS_OF_DATE}},In place
+CA-01,CC5.1,"Control activities selected and developed to mitigate assessed risks",{{SECURITY_OWNER}},Annual,Company,Risk register to control mapping,{{AS_OF_DATE}},In place
+CA-02,CC5.2,"General technology controls over infrastructure and access are in place",Engineering,Continuous,Production,This matrix (CC6-CC8 rows),{{AS_OF_DATE}},In place
+CA-03,CC5.3,"Policies establish expectations and are deployed through procedures",{{SECURITY_OWNER}},Continuous,Company,Policy set + procedures,{{AS_OF_DATE}},In place
+AC-01,CC6.1,"MFA enforced and least-privilege access for source control, cloud console, and IdP admin",{{SECURITY_OWNER}},Continuous (config),{{IDP}} / {{VCS}} / {{CLOUD_PROVIDER}},MFA + IAM config screenshots,{{AS_OF_DATE}},In place
+EN-01,CC6.1,"Data encrypted in transit (TLS 1.2+) and at rest for customer data",Engineering,Continuous (config),{{DATA_STORE}} / {{CLOUD_PROVIDER}},TLS + at-rest encryption config,{{AS_OF_DATE}},In place
+AC-02,CC6.2,"Access provisioned via Onboarding Checklist with documented approval before access",{{SECURITY_OWNER}},Per hire,All corporate systems,Onboarding approval record for [hire],{{AS_OF_DATE}},In place
+AC-03,CC6.3,"Access revoked no later than 1 business day after departure via Offboarding Checklist",{{SECURITY_OWNER}},Per departure,All corporate systems,Offboarding checklist,,No instances as of {{AS_OF_DATE}} (roster shows no departures)
+AC-03b,CC6.3,"Access reviewed at least annually and on role change",{{SECURITY_OWNER}},Annual + on role change,Access Control Matrix population,Access-review record,,Not yet due (scheduled [date])
+AC-04,CC6.4,"Physical data-center security provided by the cloud subservice org; company devices secured",{{SECURITY_OWNER}},Continuous,Devices + cloud,Device config + subservice SOC 2,{{AS_OF_DATE}},In place
+AC-05,CC6.5,"Data and media securely disposed (cryptographic erase before reissue or decommission)",{{SECURITY_OWNER}},Per disposal,Company devices / media,Device disposal log,,No instances as of {{AS_OF_DATE}} (log shows none)
+AC-06,CC6.6,"Boundary protection: cloud VPC firewall rules and TLS; no corporate network or VPN",Engineering,Continuous (config),Production,VPC firewall config,{{AS_OF_DATE}},In place
+AC-07,CC6.7,"Restricted data transmitted only over encrypted channels; movement to unmanaged storage prohibited",Engineering,Continuous,Restricted data,Encryption config + policy,{{AS_OF_DATE}},In place
+AC-08,CC6.8,"Endpoint protection prevents and detects unauthorized and malicious software (MDM + EDR)",{{SECURITY_OWNER}},Continuous (config),Company devices,MDM / EDR console,{{AS_OF_DATE}},In place
+OP-01,CC7.1,"Vulnerabilities detected via dependency and static-analysis scanning in CI and cloud findings; tracked to remediation",Engineering,Continuous,{{VCS}} + CI + {{CLOUD_PROVIDER}},Scanning alerts (open/closed),{{AS_OF_DATE}},In place
+OP-02,CC7.1,"External-facing / DAST assessment of in-scope infrastructure",{{SECURITY_OWNER}},Annual / deferred,External surface,Scope decision + compensating controls,,Compensating control (CI SCA/SAST + cloud-security controls; recurring external DAST not yet in place)
+OP-03,CC7.2,"Security events detected via alerting on IAM/policy changes, production config changes, and authentication anomalies",Engineering,Continuous,Production,Alert configuration + sample alert,{{AS_OF_DATE}},In place
+OP-04,CC7.3,"Security events evaluated to determine whether they are incidents",{{SECURITY_OWNER}},Per event,Production,IR procedure + triage records,,No instances as of {{AS_OF_DATE}} (incident log shows none)
+OP-05,CC7.4,"Incidents contained, remediated, and communicated per the IR program; post-mortems for Sev 1-2",{{SECURITY_OWNER}},Per incident,Production,IR records + post-mortems,,No instances as of {{AS_OF_DATE}} (incident log shows none)
+OP-06,CC7.5,"Recovery from incidents and disruptions via backups and restore tests",{{SECURITY_OWNER}},Annual,Production data,Backup config + restore-test record,,Not yet due (restore test scheduled [date])
+CH-01,CC8.1,"Changes merged only via reviewed, approved pull request; main branch protected; CI must pass; IaC via the same flow",Engineering,Per change,{{VCS}},Branch-protection settings + sample approved PR,{{AS_OF_DATE}},In place
+RM-01,CC9.1,"Business-disruption risk mitigated via BCP/DR with documented RTO/RPO",{{SECURITY_OWNER}},Annual,Production,BCP/DR policy + walkthrough,,Not yet due (walkthrough scheduled [date])
+RM-02,CC9.2,"Critical vendors reviewed at least annually — obtain the SOC 2, review opinion/exceptions/coverage, record the risk decision; DPA for processors",{{SECURITY_OWNER}},Annual,Vendor inventory,Vendor reviews + SOC 2 reports on file,{{AS_OF_DATE}},In place
