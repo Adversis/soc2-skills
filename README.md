@@ -34,12 +34,17 @@ They trigger on SOC 2 tasks automatically, or you can invoke them by name. Each 
 2. `soc2-audit-prep` → build the control matrix, walk the system description against real evidence, run the go-live gates, and hand off to the auditor.
 3. `vendor-risk-analyzer` → point it at a vendor's SOC 2 (and any MSA/DPA/BAA) to get a threat-modeled risk assessment for an integration decision.
 
-## Caveats
+## Where this stops
 
-- **Starters, not turnkey.** The templates are a calibrated baseline to *tailor*. The control matrix especially is a CC1–CC9 seed to complete, not a sufficient control set.
-- **Security-only Type I focus** (for the producer skills). Verify against the current AICPA Trust Services Criteria and your own auditor's expectations.
-- **Not legal or audit advice.**
+Starters and structure, not a finished audit. These skills don't:
+
+- test or verify your actual infrastructure or configuration — the audit-prep verification walk exists precisely because you must confirm each claim against real evidence;
+- make the scoping call for regulated data — they're calibrated for a startup's Security-only Type I; HIPAA, PCI-DSS, FedRAMP, or heavy privacy exposure need specialist judgment;
+- replace an AICPA-licensed CPA firm or its judgment, which governs your actual report;
+- remediate — they identify gaps and structure evidence; they don't fix your controls, configs, or code.
+
+The templates are a calibrated baseline to *tailor* (the control matrix especially is a CC1–CC9 seed to complete, not a sufficient control set). Not legal or audit advice — verify against the current AICPA Trust Services Criteria and your auditor.
 
 ## Attribution & license
 
-The policy base is adapted from [Tailscale's open-source security policies](https://github.com/tailscale/security-policies) (MIT). MIT licensed — see [`LICENSE`](LICENSE).
+MIT — see [`LICENSE`](LICENSE). The starter-pack templates under `soc2-readiness/templates/starter-pack/` are CC0-1.0 (public domain — use them in your own program, no attribution needed); see [`NOTICE`](NOTICE). The policy base is derived from [Tailscale's security-policies](https://github.com/tailscale/security-policies) (CC0).

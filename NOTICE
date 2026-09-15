@@ -1,0 +1,8 @@
+This repository is MIT-licensed (see LICENSE), with one exception:
+
+The document templates under `soc2-readiness/templates/starter-pack/` are dedicated
+to the public domain under CC0-1.0 (see that directory's LICENSE). Use them in your
+own security program freely — no attribution required.
+
+The policy base in that starter pack is derived from Tailscale's security-policies
+(https://github.com/tailscale/security-policies), also released under CC0-1.0.
