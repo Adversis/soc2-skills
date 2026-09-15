@@ -2,7 +2,7 @@
 
 Three [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) for running lean SOC 2 engagements, from [Adversis](https://adversis.io). They encode a working method, not a template dump: **lean, honest, low-liability** — policies name controls, procedures name products, don't over-document, never backdate.
 
-Scope: Security (Common Criteria), Type I first with a Type II runway. Calibrated for small, cloud-native startups.
+Scope: Security (Common Criteria), Type I first with a Type II runway. Calibrated for small, cloud-native startups. Written against the 2017 Trust Services Criteria (2022 points of focus); last reviewed September 2026.
 
 ## The three skills
 
@@ -19,6 +19,8 @@ vendor-risk-analyzer/   SKILL.md · references/threat-model-index.md
 ```
 
 ## Install
+
+Built for Claude Code and any agent-skills-compatible harness.
 
 Copy (or symlink) the folders into your Agent skills directory:
 
@@ -44,6 +46,8 @@ Starters and structure, not a finished audit. These skills don't:
 - remediate — they identify gaps and structure evidence; they don't fix your controls, configs, or code.
 
 The templates are a calibrated baseline to *tailor* (the control matrix especially is a CC1–CC9 seed to complete, not a sufficient control set). Not legal or audit advice — verify against the current AICPA Trust Services Criteria and your auditor.
+
+Need the judgment calls, the infrastructure assessment, or the remediation? [adversis.io/contact](https://adversis.io/contact). The guide behind these skills is at [startupsoc2.fyi](https://startupsoc2.fyi).
 
 ## Attribution & license
 
